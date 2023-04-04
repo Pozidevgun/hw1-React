@@ -1,23 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
 
+import './App.css';
+import ProductCard from './components/ProductCard';
+import dataCard from './data/data-product-card.json'
 function App() {
+  const { avatar, username, tag, location, stats } = dataCard
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ProductCard avatar={avatar} 
+        username={username}
+        tag={tag}
+        location={location}
+        followers={stats.followers}
+        views={stats.views}
+        likes={stats.likes}
+      />
     </div>
   );
 }
