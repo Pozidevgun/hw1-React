@@ -34,6 +34,15 @@ const ProductCard = ({ avatar, username, tag, location, followers, views, likes 
     </div>
   )
 }
+ProductCard.defaultProps = {
+  avatar: 'https://picsum.photos/200',
+  username: 'Username',
+  tag: 'tag',
+  location: 'Location',
+  followers: 0,
+  views: 0,
+  likes: 0
+};
 ProductCard.propTypes= {
   avatar: PropTypes.string,
   username: PropTypes.string,

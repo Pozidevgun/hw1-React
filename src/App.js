@@ -4,7 +4,10 @@ import ProductCard from './components/ProductCard';
 import dataCard from './data/data-product-card.json'
 import Statistics from './components/Statistics'
 import dataStatistics from './data/data-statiscs.json'
-
+import FriendsList from './components/FriendsList';
+import dataFriends from './data/data-friendlist.json'
+import TransactionHistory from './components/TransactionHistory';
+import transitions from './data/transition.json'
 function App() {
   const { avatar, username, tag, location, stats } = dataCard
   return (
@@ -18,8 +21,8 @@ function App() {
         likes={stats.likes}
       />
       <Statistics dataStat={dataStatistics} title="MY card"/>
-      <Statistics dataStat={dataStatistics}  />
-      <Statistics  title="MY card" />
+      <FriendsList friend={dataFriends}/>
+      <TransactionHistory transitions={transitions}/>
     </div>
   );
 }
